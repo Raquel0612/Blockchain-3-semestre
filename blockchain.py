@@ -4,25 +4,27 @@ import hashlib
 
 
 class Bloco:
-    def __init__(self, id, material, origem, destino, hash_anterior):
-        self.id = id
-        self.material = material
-        self.origem = origem
-        self.destino = destino
+    def __init__(self, id, estado, origem, destino, tipoDeck, hash_anterior):
+        self.id = id # id da compra
+        self.estado = estado # se a cartinha ta lacrada sabe?
+        self.origem = origem # nome da nossa lojinha
+        self.destino = destino # endereço do cliente
+        self.tipoDeck = tipoDeck # se ele é bronze, prata e etc
         self.hash_anterior = hash_anterior
         self.datatime = time.time()
         self.hash_atual = self.calcular_hash()
         self.proximo = None
 
     def calcular_hash(self):
-        entrada = f"{self.id}{self.material}{self.origem}{self.destino}{self.hash_anterior}{int(self.datatime)}"
+        entrada = f"{self.id}{self.estado}{self.origem}{self.destino}{self.tipoDeck}{self.hash_anterior}{int(self.datatime)}"
         return int(hashlib.sha256(entrada.encode()).hexdigest(), 16)
 
     def exibir(self):
         print(f"Bloco ID: {self.id}")
-        print(f"Material: {self.material}")
+        print(f"Estado: {self.estado}")
         print(f"Origem: {self.origem}")
         print(f"Destino: {self.destino}")
+        print(f"Tipo de Deck: {self.tipoDeck}")
         print(f"Hash Atual: {hex(self.hash_atual)}")
         print(f"Hash Anterior: {hex(self.hash_anterior)}")
         print(f"Data e Horário: {datetime.datetime.fromtimestamp(self.datatime).strftime('%d/%m/%Y %H:%M:%S')}\n")
@@ -77,11 +79,12 @@ def menu():
         opcao = input("Escolha uma opção: ")
 
         if opcao == '1':
-            material = input("Informe o material: ")
+            estado = input("Informe o estado das cartas: ")
             origem = input("Informe a origem: ")
             destino = input("Informe o destino: ")
+            tipoDeck = input("Informe o tipo do Deck escolhido: ")
             hash_anterior = blockchain.cabeca.hash_atual if blockchain.cabeca else 0
-            novo_bloco = Bloco(id_counter, material, origem, destino, hash_anterior)
+            novo_bloco = Bloco(id_counter, estado, origem, destino, tipoDeck, hash_anterior)
             blockchain.adicionar_bloco(novo_bloco)
             print(f"Hash: {hex(novo_bloco.hash_atual)}\n")
             print("Bloco adicionado com sucesso!\n")
