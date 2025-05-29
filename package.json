@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "npm rebuild sharp",
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint"
   },

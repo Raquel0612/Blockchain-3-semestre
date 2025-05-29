@@ -122,8 +122,8 @@ form {
 
 #falha {
     position: absolute;
-    bottom: 40;
-    right: 40;
+    bottom: 40px;
+    right: 40px;
 
     display: none;
 
