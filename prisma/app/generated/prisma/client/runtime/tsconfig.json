@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "app/generated/prisma/client": ["app/generated/prisma/client"]
+    }
+  }
+}

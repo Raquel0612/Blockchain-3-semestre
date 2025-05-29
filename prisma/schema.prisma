@@ -1,0 +1,64 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+ 
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  nome  String
+  senha String
+  email String @unique
+
+  transacoesEnviadas  Transacao[] @relation("TransacoesEnviadas")
+  transacoesRecebidas Transacao[] @relation("TransacoesRecebidas")
+
+
+}
+
+model Transacao {
+  id                   String   @id @default(auto()) @map("_id") @db.ObjectId
+  data_hora            DateTime @default(now())
+  hash_transacao       String
+  hash_anterior        String
+  assinaturaEletronica String   @unique
+
+  remetenteId    String @db.ObjectId
+  destinatarioId String @db.ObjectId
+
+  remetente    Users @relation("TransacoesEnviadas", fields: [remetenteId], references: [id])
+  destinatario Users @relation("TransacoesRecebidas", fields: [destinatarioId], references: [id])
+
+  decks Deck[]
+}
+
+model Categoria {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  tipo  String
+  decks Deck[]
+}
+
+model Deck {
+    id           String @id @default(auto()) @map("_id") @db.ObjectId
+
+  data_hora            DateTime @default(now())
+  hash_transacao       String
+  hash_anterior        String
+  assinaturaEletronica String   @unique
+
+  transacaoId          String   @db.ObjectId
+  categoriaId          String   @db.ObjectId
+
+  transacao            Transacao @relation(fields: [transacaoId], references: [id])
+  categoria            Categoria @relation(fields: [categoriaId], references: [id])
+}

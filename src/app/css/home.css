@@ -1,0 +1,236 @@
+#guard-label {
+    margin-top: 30px;
+
+    box-sizing: border-box;
+
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.desafio-label {
+    width: 600px;
+    height: 510px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .moon {
+        position: relative;
+        margin-bottom: 310px;
+    }
+
+    .conv {
+        position: absolute;
+    }
+
+.desafio-label p {
+    font-size: large;
+    text-align: center;
+    color: #c0c0c0;
+}
+
+#deck {
+    margin-top: 30px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.cards {
+    height: 610px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+}
+
+.decks-text {
+    height: 105px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.value {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.rarecard-label {
+    width: 900px;
+    height: 540px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .rarecard-label p {
+        font-size: larger;
+        text-align: center;
+        color: #c0c0c0;
+    }
+
+    .rarecard-label h1 {
+        font-size: 60px;
+        text-align: center;
+        color: #c0c0c0;
+    }
+
+.rarecard-image {
+    width: 300px;
+    height: 540px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+    .rarecard-image p {
+        text-shadow: 0 0 5px #fff, 
+                0 0 30px #fff
+    }
+
+    .luas {
+        margin-bottom: -20px;
+    }
+
+    .promo {
+        position: absolute;
+        margin-bottom: 500px;
+        margin-right: 350px;
+    }
+
+    .sparkles-left {
+        position: absolute;
+        margin-top: 400px;
+        margin-right: 300px;
+    }
+
+    .sparkles-right {
+        position: absolute;
+        margin-bottom: 400px;
+        margin-left: 300px;
+    }
+
+#guard-advise {
+    margin-top: 30px;
+
+    box-sizing: border-box;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.bib-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.card-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+    .plus {
+        position: absolute;
+        margin-top: 250px;
+    }
+
+footer {
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.645);
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    overflow-y: visible;
+    position: relative;
+}
+
+    .wrapper {
+        position: absolute;
+        top: -10px;
+        width: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    .foot-guard {
+        width: 33%;
+
+        margin-top: 10px;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        text-align: center;
+    }
+
+    .prinkfoot1 {
+        position: absolute;
+        margin-right: 490px;
+        margin-bottom: 150px;
+    }
+
+    .prinkfoot2 {
+        position: absolute;
+        margin-left: 490px;
+        margin-top: 40px;
+    }
+    @font-face {
+  font-family: 'Limelight';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/limelight/v19/XLYkIZL7aopJVbZJHDuoNOlHnnY.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Limelight';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/limelight/v19/XLYkIZL7aopJVbZJHDuoOulH.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
