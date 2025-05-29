@@ -33,3 +33,50 @@
 </div>
 
 ###
+
+<h3 align="left">🔗 DeckChain</h3>
+
+###
+
+<p align="left">Projeto que simula uma blockchain, mas com uma abordagem diferente: em vez de blocos, usamos decks de cartas.
+Cada carta representa uma transação, contendo hash, assinatura eletrônica e dados imutáveis.</p>
+
+###
+
+<h3 align="left">🚀 Tecnologias utilizadas</h3>
+
+###
+
+<p align="left">🔸 Next.js</p>
+
+<p align="left">🔸 React</p>
+
+<p align="left">🔸 Prisma</p>
+
+<p align="left">🔸 MongoDB</p>
+
+###
+
+<h3 align="left">🧠 Sobre o projeto</h3>
+
+<p align="left">Implementação de uma rede descentralizada baseada em conceitos de blockchain, porém modelada como decks de cartas.</p>
+
+<h2 align="left">Cada deck agrupa transações (cartas) que possuem:</h2>
+
+<p align="left">🔐 Hash da transação</p>
+
+<p align="left">✍️ Assinatura eletrônica</p>
+
+<p align="left">📄 Dados validados e imutáveis</p>
+
+###
+
+<h3 align="left">📑 Documentação</h3>
+
+<p align="left">Acesse a documentação completa pelo link abaixo:
+👉 Documentação no Google Drive https://drive.google.com/drive/folders/1RrOpi_FnXaCbUUogfMbDmAUFGbNZVL_Y?usp=drive_link</p>
+
+###
+
+<h3 align="left">🌐 Acesse a Home do projeto online</h3>
+
